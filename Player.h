@@ -13,13 +13,14 @@ private:
 	string name;
 	int num_of_cards;
 	vector <Card> myCards;
+	Card extraCard;
 
 
 public:
 	//bool play (&Card currentCard)
 
-	void myTurn (const Card &c);
-	void changeCurrent(const Card &current, Player &p);
+	void myTurn (Card &c);
+	void changeCurrent(Card &current, Player &p);
 
 
 	// SETTERS

@@ -43,16 +43,37 @@ void Game :: start(){
     for (int i = 0; i < this->numOfPlayers; i++){
         Player p;
         p = this->players[i];
-        //p.myTurn(tempC);
+        // p.myTurn(tempC);
     }
 
     play(tempC);
 }
 
-void Game :: play (const Card &current){
+void Game :: play (Card &current){
 
-    this->players[0].myTurn(current); 
-    this->players[0].changeCurrent(current, this->players[0]);
+    int i = 0;
+    Player winner;
+
+    this->players[i].myTurn(current); 
+    this->players[i].changeCurrent(current, this->players[i]);
+
+    i++;
+
+    this->players[i].myTurn(current); 
+    this->players[i].changeCurrent(current, this->players[i]);
+
+    cout << "current changed to: " << current;
+
+    // while (this->players.size() == numOfPlayers){ // if any player wins, numOfPlayers--
+
+    //     i++;
+
+    //     if (current)
+    //     // this->players[i].myTurn(current);                               
+    //     // this->players[i].changeCurrent(current, this->players[i]);
+
+    // }
+
 }
 
 

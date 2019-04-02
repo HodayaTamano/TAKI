@@ -19,7 +19,7 @@ public:
 	//public members and functions
 	Game(){};
 	void start();
-	void play (const Card &current);
+	void play (Card &current);
 
 };
 #endif
