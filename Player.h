@@ -14,11 +14,20 @@ private:
 	int num_of_cards;
 	vector <Card> myCards;
 
+
 public:
 	//bool play (&Card currentCard)
+
+	void myTurn (const Card &c);
+	void changeCurrent(const Card &current, Player &p);
+
+
+	// SETTERS
 	void setName(string name); 
 	void setNum(int n); 
-	void setMyCards(vector <Card> c); 
+	void setMyCards(int num_of_cards);
+	
+
 
 	friend ostream& operator <<(ostream& os, Player& p);
 

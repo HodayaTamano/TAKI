@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include <vector>
+#include <iostream>
 #include "Player.h"
 #include "Card.h"
 
@@ -18,6 +19,7 @@ public:
 	//public members and functions
 	Game(){};
 	void start();
+	void play (const Card &current);
 
 };
 #endif
